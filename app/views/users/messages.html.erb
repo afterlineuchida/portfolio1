@@ -1,8 +1,11 @@
-<div class="message-message-wrapper">
+<div class="member_user-index-wrapper">
   <div class="container">
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
+      <% if @messages.blank? %>
+        <p class="messsage">ーメッセージはまだありませんー</p>
+      <% else %>
         <% @messages.each do |message| %>
+        <div class="col-md-8 col-md-offset-2">
           <% if current_user.id == message.from_user_id %>
             <div class="message-message-single-my">
               <h5 class="message-author">
@@ -24,12 +27,13 @@
                 <%= message.content %>
               </div>
               <div class="date">
-              <%= message.created_at.strftime('%Y/%m/%d/%H:%M') %>
+                <%= message.created_at.strftime('%Y/%m/%d/%H:%M') %>
               </div>
             </div>
           <% end %>  
+          </div>
         <% end %>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>

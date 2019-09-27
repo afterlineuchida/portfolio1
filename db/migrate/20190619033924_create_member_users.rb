@@ -11,7 +11,6 @@ class CreateMemberUsers < ActiveRecord::Migration[5.2]
       t.string :artist
       t.string :url
       t.string :description
-
       t.timestamps
     end
   end

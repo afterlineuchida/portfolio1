@@ -287,9 +287,20 @@ h1 {
   }
 }
 
+.message-message-wrapper {
+  width: 100vw;
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #fafafa;
+}
+
 .message-message-single-my {
   width: 100%;
   text-align: right;
+  
 }
 
 .message-message-single-you {
@@ -321,9 +332,7 @@ h1 {
 }
 
 
-footer{
-   
-}
+
 
 .message-new-wrapper {
    width: 100vw;
@@ -333,4 +342,8 @@ footer{
   background-attachment: fixed;
   background-size: cover;
   background-color: #fafafa;
+}
+
+footer{
+ 
 }
