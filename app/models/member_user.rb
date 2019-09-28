@@ -9,8 +9,8 @@ class MemberUser < ApplicationRecord
   validates :artist, presence: true
   validates :url, presence: true
   validates :description, presence: true
-  
-  
+ # validates :age, presence: true
+ 
   
   mount_uploader :image, ImageUploader
   belongs_to :user

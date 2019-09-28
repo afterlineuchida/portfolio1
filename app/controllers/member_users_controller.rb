@@ -49,6 +49,6 @@ class MemberUsersController < ApplicationController
   end
   
   def member_user_params
-    params.require(:member_user).permit(:image, :name, :gender, :prefectures, :part, :genre, :artist, :url, :description)
+    params.require(:member_user).permit(:image, :name, :gender, :prefectures, :part, :genre, :artist, :url, :description, :age)
   end
 end

@@ -9,7 +9,7 @@ class GroupUser < ApplicationRecord
   validates :artist, presence: true
   validates :url, presence: true
   validates :description, presence: true
-  
+  #validates :url, presence: true
   
   
   mount_uploader :image, ImageUploader

@@ -43,6 +43,6 @@ class GroupUsersController < ApplicationController
   end
   
   def group_user_params
-    params.require(:group_user).permit(:image, :name, :gender, :prefectures, :part, :genre, :artist, :url, :description)
+    params.require(:group_user).permit(:image, :name, :gender, :prefectures, :part, :genre, :artist, :url, :description, :years_old)
   end
 end
