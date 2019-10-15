@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   resources :member_users
   resources :group_users
   resources :messages
+  
+  
  
   
   get '/member_or_group', to: 'users#member_or_group'
@@ -26,4 +28,8 @@ Rails.application.routes.draw do
   get '/messages_new', to: 'users#messages_new'
   post '/messages_new', to: 'users#index'
   
+  # post '/users_follows', to: 'users#follows'
+  # delete '/users_followers', to: 'users#follows'
+  post '/follows', to: 'follows#create'
+  delete '/follows', to: 'follows#destroy'
 end

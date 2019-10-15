@@ -25,6 +25,15 @@ class UsersController < ApplicationController
     #binding.pry
   end
   
+  def follows_new
+  end
+  
+  # def follows
+  #   passive_user_id = params[:passive_user_id].to_i
+  #   @follows = Follow.where("(active_user_id = ? AND passive_user_id = ?) OR (active_user_id = ? AND passive_user_id = ?)", current_user.id, passive_user_id, passive_user_id, current_user.id )
+  #   #binding.pry
+  # end
+  
   private
   def log_in(user)
     session[:user_id] = user.id
@@ -38,4 +47,5 @@ class UsersController < ApplicationController
   private 
   def member_or_group
   end
+  
 end

@@ -7,5 +7,12 @@ class User < ApplicationRecord
   has_one :member_user
   has_one :group_user
   has_many :messages 
+  # has_many :follows
+  # has_many :follow_users, through: :follows, source: 'User',foreign_key: 'active_user_id'
  
+
+  has_many :user_follows, class_name: "Follow", foreign_key: :active_user_id
+  has_many :follows, through: :user_follows,source: :follow
+  has_many :user_followers, class_name: "Follow", foreign_key: :passive_user_id
+  has_many :followers, through: :user_followers
 end

@@ -23,7 +23,8 @@ class MemberUsersController < ApplicationController
   
   def show
     @member_user_show = MemberUser.find(params[:id])
-    #binding.pry
+    # binding.pry
+    #.all.includes(:favorite_users, :comments)
   end
   
   def edit
@@ -40,6 +41,8 @@ class MemberUsersController < ApplicationController
       render :edit
     end
   end
+  
+
   
  
   

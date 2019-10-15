@@ -65,6 +65,23 @@
               <%= link_to users_messages_path(to_user_id: @member_user_show.user_id), method: :get, class: 'btn btn-primary' do %>
                 メッセージ一覧
               <% end %>
+              
+              <% if current_user.user_follows.pluck(:passive_user_id).include?(@member_user_show.user_id) %>
+                <%= link_to follows_path(passive_user_id: @member_user_show.user_id, member_user_id: @member_user_show.id), method: :delete, class: 'btn btn-primary' do %>
+                  フォロー解除
+                <% end %>
+                
+                
+              <% else %>
+                <%= link_to follows_path(passive_user_id: @member_user_show.user_id, member_user_id: @member_user_show.id), method: :post, class: 'btn btn-primary' do %>
+                  フォローする
+                <% end %>
+              
+              
+                
+                
+                
+              <% end %>
           </div>
         </div>
       </div>
