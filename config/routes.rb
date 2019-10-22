@@ -28,8 +28,7 @@ Rails.application.routes.draw do
   get '/messages_new', to: 'users#messages_new'
   post '/messages_new', to: 'users#index'
   
-  # post '/users_follows', to: 'users#follows'
-  # delete '/users_followers', to: 'users#follows'
+  get 'follows/index'
   post '/follows', to: 'follows#create'
   delete '/follows', to: 'follows#destroy'
 end

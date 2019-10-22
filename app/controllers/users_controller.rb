@@ -21,6 +21,7 @@ class UsersController < ApplicationController
   def messages
     to_user_id = params[:to_user_id].to_i
     @messages = Message.where("(from_user_id = ? AND to_user_id = ?) OR (from_user_id = ? AND to_user_id = ?)", current_user.id, to_user_id, to_user_id, current_user.id )
+    #binding.pry
     # @messages = Message.where("(from_user_id = 4 AND to_user_id = 5)")
     #binding.pry
   end

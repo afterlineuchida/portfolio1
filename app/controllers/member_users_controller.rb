@@ -1,6 +1,7 @@
 class MemberUsersController < ApplicationController
   def index
     @member_users = MemberUser.all
+    # binding.pry
   end
     
   def new

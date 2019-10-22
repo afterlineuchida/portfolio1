@@ -30,6 +30,15 @@
         <% end %>
         <ul class="nav navbar-nav navbar-right">
           <% if logged_in? %>
+          
+          
+            <li>
+              <%= link_to  follows_index_path do %>
+                <%= image_tag "icons/follower.png" %>
+              <% end %>
+            </li>
+            
+            
             <li>
               <%= link_to logout_path, method: :delete do %>
                 <%= image_tag "icons/logout.png" %>

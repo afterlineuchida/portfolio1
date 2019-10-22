@@ -1,0 +1,48 @@
+<div class="follow-index-wrapper">
+  <div class="container">
+    <p class="search">ー フォロー　一覧 ー </p>
+      <div class="row">
+      <% @follow_users.each do |follow_user| %>
+        <div class="col-md-4 col-md-offset-1">
+          <div class="follow-index-single">
+            <div class="member_user-index-single">
+              <h2 class="member_user-author">
+                <%= follow_user.member_user.name %>
+              </h2>
+              <div class="member_user-image">
+                <%= image_tag follow_user.member_user.image.url %>
+              </div>
+              <table class="table">
+                <tr>
+                  <th>年齢</th>
+                  <td><%= follow_user.member_user.age %></td>
+                </tr>
+                <tr>
+                  <th>性別</th>
+                  <td><%= follow_user.member_user.gender %></td>
+                </tr>
+                <tr>
+                  <th>都道府県</th>
+                  <td><%= follow_user.member_user.prefectures %></td>
+                </tr>
+                <tr>
+                  <th>担当パート</th>
+                  <td><%= follow_user.member_user.part %></td>
+                </tr>
+                <tr>
+                  <th>好きなジャンル</th>
+                  <td><%= follow_user.member_user.genre %></td>
+                </tr>
+              </table>
+              
+              <%= link_to member_user_path(id: follow_user.member_user.id),method: :get,class: 'btn btn-white' do %>
+                ープロフィール詳細ー
+              <% end %>
+              
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
